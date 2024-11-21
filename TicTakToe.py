@@ -29,23 +29,23 @@ def printArry(Arry):
 def add(Arry, input, marker):
      match input:
         case "a":
-            Arry[0][0] = "marker"
+            Arry[0][0] = marker
         case "b":
-            Arry[0][1] = "marker"
+            Arry[0][1] = marker
         case "c":
-            Arry[0][2] = "marker"
+            Arry[0][2] = marker
         case "d":
-            Arry[1][0] = "marker"
+            Arry[1][0] = marker
         case "e":
-            Arry[1][1] = "marker"
+            Arry[1][1] = marker
         case "f":
-            Arry[1][2] = "marker"
+            Arry[1][2] = marker
         case "g":
-            Arry[2][0] = "marker"
+            Arry[2][0] = marker
         case "h":
-            Arry[2][1] = "marker"
+            Arry[2][1] = marker
         case "i":
-            Arry[2][2] = "marker"
+            Arry[2][2] = marker
 
 
 print("Welcome to not your average TicTacToe")
@@ -67,6 +67,7 @@ while (Arry[0][0] == "a" or Arry[0][1] == "b" or Arry[0][2] == "c" or Arry[1][0]
     try:
         var = check(Arry)
         print(var,"Wins")
+        print()
     except:
         pass
 
@@ -80,10 +81,12 @@ while (Arry[0][0] == "a" or Arry[0][1] == "b" or Arry[0][2] == "c" or Arry[1][0]
 
     add(Arry, z, p2)
     printArry(Arry)
+    
 
     try:
         var = check(Arry)
         print(var,"Wins")
+        print()
     except:
         pass
 
