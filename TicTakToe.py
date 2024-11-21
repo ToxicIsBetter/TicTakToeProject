@@ -29,23 +29,23 @@ def printArry(Arry):
 def add(Arry, input, marker):
      match input:
         case "a":
-            Arry[0][0] = "X"
+            Arry[0][0] = "marker"
         case "b":
-            Arry[0][1] = "X"
+            Arry[0][1] = "marker"
         case "c":
-            Arry[0][2] = "X"
+            Arry[0][2] = "marker"
         case "d":
-            Arry[1][0] = "X"
+            Arry[1][0] = "marker"
         case "e":
-            Arry[1][1] = "X"
+            Arry[1][1] = "marker"
         case "f":
-            Arry[1][2] = "X"
+            Arry[1][2] = "marker"
         case "g":
-            Arry[2][0] = "X"
+            Arry[2][0] = "marker"
         case "h":
-            Arry[2][1] = "X"
+            Arry[2][1] = "marker"
         case "i":
-            Arry[2][2] = "X"
+            Arry[2][2] = "marker"
 
 
 print("Welcome to not your average TicTacToe")
@@ -57,22 +57,35 @@ printArry(Arry)
 while (Arry[0][0] == "a" or Arry[0][1] == "b" or Arry[0][2] == "c" or Arry[1][0] == "d" or Arry[1][1] == "e" or Arry[1][2] == "f" or Arry[2][0] == "g" or Arry[2][1] == "h" or Arry[2][2] == "i"):
     
     print("**Player 1's turn**")
+
     p1 = input("Please choose your marker (X or O) : ")
     y = input("Enter the location you want to place your X: ")
+
     add(Arry, y, p1)
-    printArry()
+    printArry(Arry)
    
-    var = check(Arry)
-    print(var,"Wins")
+    try:
+        var = check(Arry)
+        print(var,"Wins")
+    except:
+        pass
 
     print("**Player 2's turn**")
     z = input("Enter the location you want to place your O: ")
 
-    add(Arry, z, p2)
-    printArry()
+    if(p1 == "X"):
+        p2 = "O"
+    elif(p1 == "O"):
+        p2 = "X"
 
-    var = check(Arry)
-    print(var,"Wins")
+    add(Arry, z, p2)
+    printArry(Arry)
+
+    try:
+        var = check(Arry)
+        print(var,"Wins")
+    except:
+        pass
 
 
 
