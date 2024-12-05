@@ -54,11 +54,12 @@ Arry = [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
 
 printArry(Arry)
 
+p1 = input("Please choose your marker (X or O) : ")
+
 while (Arry[0][0] == "a" or Arry[0][1] == "b" or Arry[0][2] == "c" or Arry[1][0] == "d" or Arry[1][1] == "e" or Arry[1][2] == "f" or Arry[2][0] == "g" or Arry[2][1] == "h" or Arry[2][2] == "i"):
     
     print("**Player 1's turn**")
 
-    p1 = input("Please choose your marker (X or O) : ")
     y = input("Enter the location you want to place your X: ")
 
     add(Arry, y, p1)
